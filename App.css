@@ -1,0 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+*{
+    box-sizing: border-box;
+  }
+  body{
+    background-color: black;
+    color: white;
+    font-family: 'Quicksand';
+    
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
