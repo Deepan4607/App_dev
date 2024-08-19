@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&family=Staatliches&display=swap');
+
+.anime{
+  width: 100%;
+  position:absolute;
+}
+#videoo{
+  
+  padding-top: 6%;
+  position: fixed;
+  width: 100%;
+height: 60vh;
+}
+.animepage{
+  margin-top: 5%;
+}
+.animepage h1{
+    text-align: center;
+    font-family: 'Notable';
+    letter-spacing: 2px;
+    color: #04bf04;
+  }
+  .animepage h3{
+    font-family: 'Staatliches';
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  .banner {
+    width: 100%;
+    height: 60vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    
+  }
+  
+  .banner .slide {
+    position: absolute;
+    width: 150px;
+    height: 220px;
+    top: 10%;
+    left: calc(50% - 75px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 100s linear infinite;
+    image-rendering: auto; 
+    image-rendering: crisp-edges; 
+    image-rendering: high-quality; 
+  }
+  
+  @keyframes autoRun {
+    from {
+      transform: perspective(1000px) rotateX(-5deg) rotateY(0deg);
+    }
+    to {
+      transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
+    }
+  }
+  
+  .banner .slide .item {
+    flex: 0 0 auto;
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+  }
+  
+  .banner .slide .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    backface-visibility: hidden;
+    transform: translateZ(200px); 
+  }
+  .banner .slide .item img:hover {
+      transform: translateY(10px) scale(1.1);
+      cursor: pointer;
+  }
+.morecards{
+    padding-left: 2%;
+}
+  

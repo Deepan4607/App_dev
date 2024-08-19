@@ -1,0 +1,195 @@
+/* FilterPage.css */
+
+.filter-page {
+    position: absolute;
+    background-color: #000000;
+    color: #f8f8f8;
+    min-height: 100vh;
+  }
+  
+  .filter-section {
+    background-color: #232323;
+    padding: 20px;
+    margin-top: 5%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .filter-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  .filter-genre label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .filter-group select,
+  .filter-group input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  .genre-options {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .genre-item {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .genre-item:hover,
+  .genre-item.selected {
+    background-color: rgba(42, 164, 1, 0.9);
+    color: white;
+  }
+  
+  .apply-filters-btn {
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: rgba(42, 164, 1, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-filters-btn:hover {
+    background-color: rgba(34, 130, 1, 0.9);
+  }
+  
+  .filter-results {
+    margin-left: 20px;
+    padding: 20px;
+  }
+  
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .results-grid img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    width: 165px;
+    height: 235px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    background-color: #1c1c1c;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.card:hover img {
+    opacity: 1;
+}
+
+.card-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%);
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.card:hover .card-details {
+    opacity: 1;
+}
+
+.card-details h3 {
+  position: absolute;
+  bottom: 28px;
+  right: 10px;
+  left: 10px;
+  font-size: 12px;
+}
+
+.card-details p {
+    color: #e0e0e0;
+    font-size: 0.9em;
+}
+
+.card-details .play-button {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card-details .play-button:before {
+    content: '▶';
+    color: white;
+    font-size: 20px;
+}
+
+.card-details .imdb-rating {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    color: #f5c518;
+    font-size: 10px;
+    font-weight: bold;
+}

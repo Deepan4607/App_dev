@@ -1,0 +1,221 @@
+/* Detailspage.css */
+
+.Detailspage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000000;
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: #e1e1e1;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.detailsmain {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.poster-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: 1;
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 2rem;
+  width: 80%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.poster img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.details p {
+  margin-bottom: 2px;
+}
+
+.details .genre {
+  font-weight: bold;
+  color: #018c01;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.details select {
+  padding: 0.5rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  margin-top: 1rem;
+  border-radius: 10px;
+  outline: none;
+}
+.details .play{
+  margin-top: 5px;
+}
+.details .play .play-btn {
+  padding: 9px 18px;
+  margin-right: 10px;
+  background-color: #018c01;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.details .play-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Episode Grid */
+.episode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 10px;
+  margin-top: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.episode-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  background-color: #3a3a3a;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.episode-item:hover {
+  background-color: #018c01; 
+}
+
+.episode-item.selected {
+  background-color: #f5c518; /* Selected episode color */
+}
+
+/* Comments section */
+.comments {
+  width: 80%;
+  background: #181818;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.comments h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #018c01;
+}
+
+.comments input, .comments button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  border: none;
+}
+
+.comments input {
+  background: #121212;
+  color: #e1e1e1;
+}
+
+.comments button {
+  background-color: #018c01;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.comments button:hover {
+  background-color: #007200;
+}
+/* Like and Dislike Buttons */
+.like-dislike-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.like-button, .dislike-button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.like-button:hover {
+  background: #018c01;
+}
+
+.dislike-button:hover {
+  background: #b22222;
+}
